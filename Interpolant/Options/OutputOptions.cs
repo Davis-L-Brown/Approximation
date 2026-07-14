@@ -1,7 +1,7 @@
 ﻿namespace Interpolant.Options
 {
     /// <summary>
-    /// Defines output options for an interpolator.
+    /// Defines output options for an interpolator object.
     /// </summary>
     public sealed class OutputOptions
     {

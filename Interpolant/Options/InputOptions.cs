@@ -3,7 +3,7 @@
 namespace Interpolant.Options
 {
     /// <summary>
-    /// Defines input options for an interpolator.
+    /// Defines input options for an interpolator object.
     /// </summary>
     public sealed class InputOptions
     {

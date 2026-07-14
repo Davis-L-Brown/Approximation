@@ -2,6 +2,9 @@
 
 namespace Interpolant.Options
 {
+    /// <summary>
+    /// Defines the extrapolation options for an interpolator object.
+    /// </summary>
     public sealed class ExtrapolationOptions
     {
         /// <summary>
