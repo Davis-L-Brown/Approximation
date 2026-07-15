@@ -95,7 +95,7 @@ namespace Approximation.Configuration.Output
             }
 
 
-            return new Resolved.OutputConfiguration(
+            return new OutputConfiguration(
                 outputPath,
                 options.CreateLogs, logPath,
                 options.CreateEvaluationTrace, evaluationTracePath,
