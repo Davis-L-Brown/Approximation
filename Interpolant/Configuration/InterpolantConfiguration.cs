@@ -1,4 +1,5 @@
 ﻿using Interpolant.Configuration.Input;
+using Interpolant.Configuration.Interpolation;
 using Interpolant.Configuration.Output;
 
 namespace Interpolant.Configuration
@@ -33,6 +34,11 @@ namespace Interpolant.Configuration
         /// </summary>
         public OutputConfiguration Output { get; }
 
+        /// <summary>
+        /// Get the resolved concrete <see cref="IInterpolationConfiguration"/>
+        /// instance.
+        /// </summary>
+        public IInterpolationConfiguration Interpolation { get; }
 
         /// <summary>
         /// Create a new instance of <see cref="InterpolantConfiguration"/>,
@@ -40,10 +46,12 @@ namespace Interpolant.Configuration
         /// </summary>
         public InterpolantConfiguration(
             InputConfiguration input,
-            OutputConfiguration output)
+            OutputConfiguration output,
+            IInterpolationConfiguration interpolation)
         {
             Input = input;
             Output = output;
+            Interpolation = interpolation;
         }
     }
 }

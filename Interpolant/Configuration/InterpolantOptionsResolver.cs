@@ -1,4 +1,5 @@
 ﻿using Interpolant.Configuration.Input;
+using Interpolant.Configuration.Interpolation;
 using Interpolant.Configuration.Output;
 using System;
 
@@ -32,7 +33,7 @@ namespace Interpolant.Configuration
 
             var input = InputOptionsResolver.Resolve(options.Input);
             var output = OutputOptionsResolver.Resolve(options.Output);
-            //var interpolation = InterpolationOptionsResolver.Resolve(options.Interpolation);
+            var interpolation = InterpolationOptionsResolver.Resolve(options.Interpolation);
             //var extrapolation = ExtrapolationOptionsResolver.Resolve(options.Extrapolation);
 
             //return new Resolved.InterpolantOptions(
@@ -42,7 +43,7 @@ namespace Interpolant.Configuration
             //    extrapolation);
 
             return new InterpolantConfiguration(
-                input, output);
+                input, output, interpolation);
         }
     }
 }

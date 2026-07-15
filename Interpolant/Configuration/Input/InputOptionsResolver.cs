@@ -35,7 +35,7 @@ namespace Interpolant.Configuration.Input
 
             // TODO: expand this resolver as the input options expand
 
-            return new Resolved.InputConfiguration(
+            return new InputConfiguration(
                 duplicatePolicy: options.DuplicatePolicy);
         }
     }

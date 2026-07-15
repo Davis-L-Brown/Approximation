@@ -16,11 +16,5 @@
         /// <see cref="ExtrapolationMethod"/>.
         /// </remarks>
         ExtrapolationMethod Method { get; set; }
-
-
-        /// <summary>
-        /// Validate the extrapolation options for the interpolator object.
-        /// </summary>
-        void Validate();
     }
 }
