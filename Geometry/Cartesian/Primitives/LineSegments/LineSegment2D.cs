@@ -1,5 +1,5 @@
 ﻿using Geometry.Cartesian.Points;
-using System;
+using Geometry.Cartesian.Primitives.Vectors;
 
 namespace Geometry.Cartesian.Primitives.LineSegments
 {
@@ -15,30 +15,38 @@ namespace Geometry.Cartesian.Primitives.LineSegments
         where TPoint : IPoint2D
     {
         /// <inheritdoc/>
-        public TPoint StartPoint { get; }
+        public TPoint Start { get; }
 
         /// <inheritdoc/>
-        public TPoint EndPoint { get; }
+        public TPoint End { get; }
+
+        /// <summary>
+        /// Gets the direction of the line segment.
+        /// </summary>
+        public Vector2D Direction =>
+            new Vector2D(
+                End.X - Start.X,
+                End.Y - Start.Y);
 
         /// <inheritdoc/>
-        public double Length { get; }
+        IVector ILineSegment<TPoint>.Direction => Direction;
 
         /// <inheritdoc/>
-        public double LengthSquared { get; }
+        public double Length =>
+            Direction.Magnitude;
+
+        /// <inheritdoc/>
+        public double LengthSquared =>
+            Direction.MagnitudeSquared;
+
 
         /// <summary>
         /// Create an instance of <see cref="LineSegment2D{TCoordinate}"/>.
         /// </summary>
         public LineSegment2D(TPoint start, TPoint end)
         {
-            StartPoint = start;
-            EndPoint = end;
-
-            double dx = end.X - start.X;
-            double dy = end.Y - start.Y;
-
-            LengthSquared = dx * dx + dy * dy;
-            Length = Math.Sqrt(LengthSquared);
+            Start = start;
+            End = end;
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using Geometry.Cartesian.Points;
+using Geometry.Cartesian.Primitives.Vectors;
 
 namespace Geometry.Cartesian.Primitives.LineSegments
 {
@@ -15,12 +16,17 @@ namespace Geometry.Cartesian.Primitives.LineSegments
         /// <summary>
         /// The starting <see cref="TPoint"/>.
         /// </summary>
-        TPoint StartPoint { get; }
+        TPoint Start { get; }
 
         /// <summary>
         /// The ending <see cref="TPoint"/>.
         /// </summary>
-        TPoint EndPoint { get; }
+        TPoint End { get; }
+
+        /// <summary>
+        /// The direction of the line segment.
+        /// </summary>
+        IVector Direction { get; }
 
         /// <summary>
         /// The length of the line segment.
@@ -31,5 +37,7 @@ namespace Geometry.Cartesian.Primitives.LineSegments
         /// The length of the line segment, squared.
         /// </summary>
         double LengthSquared { get; }
+
+
     }
 }
