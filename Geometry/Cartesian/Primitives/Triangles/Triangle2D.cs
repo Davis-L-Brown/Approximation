@@ -95,7 +95,7 @@ namespace Geometry.Cartesian.Primitives.Triangles
             double signedDoubleArea = Vector2D.Cross(v12, v13);
             double doubledArea = Math.Abs(signedDoubleArea);
 
-            if (!TriangleValidator.IsDegenerate(
+            if (TriangleValidator.IsDegenerate(
                 doubledArea,
                 v12.MagnitudeSquared,
                 v13.MagnitudeSquared,

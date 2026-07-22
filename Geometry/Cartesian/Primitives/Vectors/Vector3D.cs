@@ -42,9 +42,7 @@ namespace Geometry.Cartesian.Primitives.Vectors
         /// Creates a new instance of <see cref="Vector3D"/>
         /// from two <see cref="IPoint3D"/>.
         /// </summary>
-        public static Vector3D FromPoints(
-            IPoint3D start,
-            IPoint3D end)
+        public static Vector3D FromPoints(IPoint3D start, IPoint3D end)
         {
             return new Vector3D(
                 end.X - start.X,

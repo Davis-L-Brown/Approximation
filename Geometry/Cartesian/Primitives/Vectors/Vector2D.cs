@@ -39,9 +39,7 @@ namespace Geometry.Cartesian.Primitives.Vectors
         /// Creates a new instance of <see cref="Vector2D"/>
         /// from two <see cref="IPoint2D"/>.
         /// </summary>
-        public static Vector2D FromPoints(
-            IPoint2D start,
-            IPoint2D end)
+        public static Vector2D FromPoints(IPoint2D start, IPoint2D end)
         {
             return new Vector2D(
                 end.X - start.X,

@@ -90,7 +90,7 @@ namespace Geometry.Cartesian.Primitives.Triangles
             Vector3D doubleAreaVector = Vector3D.Cross(v12, v13);
             double doubledArea = doubleAreaVector.Magnitude;
 
-            if (!TriangleValidator.IsDegenerate(
+            if (TriangleValidator.IsDegenerate(
                 doubledArea,
                 v12.MagnitudeSquared,
                 v12.MagnitudeSquared,
