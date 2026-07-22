@@ -45,33 +45,12 @@ namespace Geometry.Cartesian.Primitives.LineSegments
     /// <summary>
     /// Represents a line segment in 2D cartesian space.
     /// </summary>
-    public class LineSegment2D : ILineSegment<IPoint2D>
+    public class LineSegment2D : LineSegment2D<IPoint2D>
     {
-        /// <inheritdoc/>
-        public IPoint2D StartPoint { get; }
-
-        /// <inheritdoc/>
-        public IPoint2D EndPoint { get; }
-
-        /// <inheritdoc/>
-        public double Length { get; }
-
-        /// <inheritdoc/>
-        public double LengthSquared { get; }
-
         /// <summary>
         /// Create an instance of <see cref="LineSegment2D{TCoordinate}"/>.
         /// </summary>
         public LineSegment2D(IPoint2D start, IPoint2D end)
-        {
-            StartPoint = start;
-            EndPoint = end;
-
-            double dx = end.X - start.X;
-            double dy = end.Y - start.Y;
-
-            LengthSquared = dx * dx + dy * dy;
-            Length = Math.Sqrt(LengthSquared);
-        }
+            : base(start, end) { }
     }
 }
