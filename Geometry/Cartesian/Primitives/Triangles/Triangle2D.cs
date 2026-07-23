@@ -1,7 +1,7 @@
 ﻿using Geometry.Cartesian.Points;
 using Geometry.Cartesian.Primitives.LineSegments;
 using Geometry.Cartesian.Primitives.Triangles.Exceptions;
-using Geometry.Cartesian.Primitives.Triangles.Internal;
+using Geometry.Cartesian.Primitives.Triangles.Support;
 using Geometry.Cartesian.Primitives.Vectors;
 using Geometry.Quantities.Angles;
 using System;

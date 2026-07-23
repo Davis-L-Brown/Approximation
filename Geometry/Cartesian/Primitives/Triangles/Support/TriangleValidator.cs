@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Geometry.Cartesian.Primitives.Triangles.Internal
+namespace Geometry.Cartesian.Primitives.Triangles.Support
 {
     internal static class TriangleValidator
     {

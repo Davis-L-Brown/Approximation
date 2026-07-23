@@ -1,7 +1,7 @@
 ﻿using Geometry.Quantities.Angles;
 using System;
 
-namespace Geometry.Cartesian.Primitives.Triangles.Internal
+namespace Geometry.Cartesian.Primitives.Triangles.Support
 {
     public static class TriangleMath
     {
@@ -23,7 +23,7 @@ namespace Geometry.Cartesian.Primitives.Triangles.Internal
         /// <returns>
         /// The calculated angle.
         /// </returns>
-        public static Angle GetInteriorAngle(
+        internal static Angle GetInteriorAngle(
             double leftAdjacentLength,
             double rightAdjacentLength,
             double oppositeLength)
